@@ -1,0 +1,71 @@
+/* Couleur de fond personnalisée (un gris anthracite très élégant au lieu du noir basique) */
+.custom-navbar {
+  background-color: #1e293b !important; 
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+/* Style du conteneur du logo pour qu'il soit bien intégré */
+.logo-wrapper {
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Liens de navigation */
+.custom-nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol des liens */
+.custom-nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Style du lien de la page active */
+.custom-nav-link.active {
+  color: #ffffff !important;
+  background-color: #3b82f6; /* Bleu moderne */
+}
+
+/* Zone d'affichage de l'utilisateur */
+.user-profile {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Badge de rôle (Admin/Serveur) */
+.user-badge {
+  background-color: #10b981; /* Vert émeraude */
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+  text-transform: capitalize;
+}
+
+/* Bouton de déconnexion */
+.btn-logout {
+  background-color: transparent;
+  color: #f87171;
+  border: 1px solid #f87171;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #f87171;
+  color: white;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+}
