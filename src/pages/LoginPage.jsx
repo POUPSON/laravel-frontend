@@ -6,6 +6,7 @@ import logo from '../assets/logo_restaur.png';
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [afficherMotDePasse, setAfficherMotDePasse] = useState(false);
   const [erreur, setErreur] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -49,13 +50,23 @@ function LoginPage() {
 
           <div className="mb-3">
             <label className="form-label">Mot de passe</label>
-            <input
-              type="password"
-              className="form-control"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+            <div className="input-group">
+              <input
+                type={afficherMotDePasse ? 'text' : 'password'}
+                className="form-control"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <button
+                type="button"
+                className="btn btn-outline-secondary"
+                onClick={() => setAfficherMotDePasse(!afficherMotDePasse)}
+                tabIndex={-1}
+              >
+                {afficherMotDePasse ? 'Masquer' : 'Afficher'}
+              </button>
+            </div>
           </div>
 
           {erreur && <div className="alert alert-danger py-2">{erreur}</div>}

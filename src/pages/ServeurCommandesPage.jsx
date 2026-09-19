@@ -108,11 +108,11 @@ function ServeurCommandesPage() {
         {/* EN-TÊTE */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <div>
-            <h3 className="fw-bold mb-1">📋 Suivi de mes Commandes</h3>
+            <h3 className="fw-bold mb-1"> Suivi de mes Commandes</h3>
             <p className="text-muted mb-0">Consultez et gérez le statut de paiement des tables</p>
           </div>
           <button className="btn btn-outline-primary" onClick={chargerCommandes} disabled={loading}>
-            🔄 {loading ? 'Chargement...' : 'Actualiser'}
+             {loading ? 'Chargement...' : 'Actualiser'}
           </button>
         </div>
 
@@ -193,8 +193,8 @@ function ServeurCommandesPage() {
                 }}
               >
                 <option value="tous">Tous les statuts</option>
-                <option value="non_payee">⏳ Non payées</option>
-                <option value="payee">✅ Payées</option>
+                <option value="non_payee"> Non payées</option>
+                <option value="payee"> Payées</option>
               </select>
             </div>
 
@@ -265,7 +265,7 @@ function ServeurCommandesPage() {
                               : 'bg-warning-subtle text-warning-emphasis border border-warning'
                           }`}
                         >
-                          {commande.statut === 'payee' ? '✅ Payée' : '⏳ En attente'}
+                          {commande.statut === 'payee' ? ' Payée' : ' En attente'}
                         </span>
                       </td>
                       <td className="text-muted small">
@@ -284,7 +284,7 @@ function ServeurCommandesPage() {
                             onClick={() => marquerPayee(commande.id)}
                             disabled={actionLoading === commande.id}
                           >
-                            {actionLoading === commande.id ? 'Mise à jour...' : '💳 Encasser'}
+                            {actionLoading === commande.id ? 'Mise à jour...' : ' Encasser'}
                           </button>
                         ) : (
                           <span className="text-muted small italic">Aucune action</span>

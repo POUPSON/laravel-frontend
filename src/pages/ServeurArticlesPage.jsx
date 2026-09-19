@@ -115,7 +115,7 @@ function ServeurArticlesPage() {
                 <div className="col-md-5">
                   <div className="input-group">
                     <span className="input-group-text bg-white border-end-0">
-                      🔍
+                      Rechercher
                     </span>
                     <input
                       type="text"
@@ -141,7 +141,7 @@ function ServeurArticlesPage() {
                         setSousCategorieActive(null);
                       }}
                     >
-                      🍽️ Plats
+                      Plats
                     </button>
                     <button
                       type="button"
@@ -155,7 +155,7 @@ function ServeurArticlesPage() {
                         setSousCategorieActive(null);
                       }}
                     >
-                      🥤 Boissons
+                      Boissons
                     </button>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ function ServeurArticlesPage() {
           <div className="col-lg-4">
             <div className="card border-0 shadow-sm sticky-top" style={{ top: '20px' }}>
               <div className="card-header bg-white border-0 py-3">
-                <h5 className="mb-0 fw-bold">📋 Commande en cours</h5>
+                <h5 className="mb-0 fw-bold">Commande en cours</h5>
               </div>
 
               <div className="card-body">
@@ -300,10 +300,10 @@ function ServeurArticlesPage() {
                             {(item.prix * item.quantite).toLocaleString()} FCFA
                           </span>
                           <button
-                            className="btn btn-sm btn-outline-danger border-0 p-1"
+                            className="btn btn-sm btn-outline-danger border-0 py-0 px-2"
                             onClick={() => modifierQuantite(item.id, -item.quantite)}
                           >
-                            🗑️
+                            Retirer
                           </button>
                         </div>
                       </div>
