@@ -18,13 +18,13 @@ function ServeurArticlesPage() {
     chargerDonnees();
   }, []);
 
-  const chargerDonnees = async () => {
+ const chargerDonnees = async () => {
     try {
       const [resArticles, resSousCategories] = await Promise.all([
         api.get('/articles'),
         api.get('/sous-categories'),
       ]);
-      setArticles(resArticles.data.data || []);
+      setArticles(Array.isArray(resArticles.data) ? resArticles.data : resArticles.data.data || []);
       setSousCategories(resSousCategories.data || []);
     } catch (err) {
       setErreur('Impossible de charger les données du menu.');
