@@ -1,16 +1,30 @@
-# React + Vite
+# Restau Manager — Front-end (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web du projet de gestion de restaurant, développée en React. Consomme l'API du back-end Laravel : [laravel-backend](https://github.com/POUPSON/laravel-backend).
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React (Vite), React Router, Bootstrap, Chart.js, Axios.
 
-## React Compiler
+## Fonctionnalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Serveur** : connexion, consultation du menu avec recherche, création de commande, suivi de ses commandes et changement de statut de paiement.
 
-## Expanding the ESLint configuration
+**Administrateur** : gestion du menu (CRUD articles/sous-catégories), vue sur toutes les commandes, statistiques par période et par serveur avec diagramme, gestion des utilisateurs.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+\`\`\`bash
+git clone git@github.com:POUPSON/laravel-frontend.git
+cd laravel-frontend
+npm install
+npm run dev
+\`\`\`
+
+⚠️ Le back-end doit tourner sur `http://127.0.0.1:8001` (voir [laravel-backend](https://github.com/POUPSON/laravel-backend)).
+
+Application accessible sur `http://localhost:5173`.
+
+## Auteur
+
+NTAGNE FONKAM CHRISTIAN CAMILLE
